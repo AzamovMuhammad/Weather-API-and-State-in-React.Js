@@ -1,9 +1,14 @@
 import React from "react";
 import "../style/weatherDetails.css";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function WeatherDetails({ location, current }) {
   if (!location || !current) {
-    return <h1 className="loading-text">Loading...</h1>;
+    return <DotLottieReact
+    src="https://lottie.host/871a59b4-ddbd-444f-92fd-a20fba4fe914/yZSF5GyWvV.lottie"
+    loop
+    autoplay
+  />;
   }
   return (
     <div className="weather-container">

@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import "../style/dayButton.css";
 
-function DayButton() {
+function DayButton({ day }) {
+  const weekDay = new Date(day.date).toLocaleDateString("eng-US", {
+    weekday: "short",
+  });
   return (
-    <div>DayButton</div>
-  )
+    <div>
+      <button>{weekDay}</button>
+    </div>
+  );
 }
 
-export default DayButton
+export default DayButton;

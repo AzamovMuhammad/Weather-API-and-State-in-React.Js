@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import WeatherDetails from "./components/WeatherDetails";
-
+import DayButton from "./components/DayButton";
 
 function WeatherApp() {
   const [weather, setWeather] = useState(null);
@@ -22,8 +22,13 @@ function WeatherApp() {
   }, []);
 
   return (
-    <div>
-      <WeatherDetails location={weather?.location}  current={weather?.current}/>
+    <div >
+      <WeatherDetails location={weather?.location} current={weather?.current} />
+      <div className="weekButtons">
+        {weather?.forecast?.forecastday.map((day) => {
+          return <DayButton key={day.date_epoch} day={day} />;
+        })}
+      </div>
     </div>
   );
 }
