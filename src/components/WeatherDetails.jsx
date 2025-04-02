@@ -1,8 +1,11 @@
 import React from 'react'
 
-function WeatherDetails() {
+function WeatherDetails({location}) {
   return (
-    <div>WeatherDetails</div>
+    <div>
+        <h1>{location?.name}</h1>
+        <h1>{location?.country}</h1>
+    </div>
   )
 }
 
