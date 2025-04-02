@@ -1,7 +1,10 @@
-import React from 'react'
-import '../style/weatherDetails.css'
+import React from "react";
+import "../style/weatherDetails.css";
 
-function WeatherDetails({location, current}) {
+function WeatherDetails({ location, current }) {
+  if (!location || !current) {
+    return <h1 className="loading-text">Loading...</h1>;
+  }
   return (
     <div className="weather-container">
       <div className="location-container">
@@ -9,12 +12,16 @@ function WeatherDetails({location, current}) {
         <h2 className="location-country">{location?.country}</h2>
       </div>
       <div className="weather-info">
-        <img src={current?.condition?.icon} alt="Weather Icon" className="weather-icon" />
+        <img
+          src={current?.condition?.icon}
+          alt="Weather Icon"
+          className="weather-icon"
+        />
         <h2 className="temperature">{current?.temp_c}°C</h2>
       </div>
       <p className="weather-condition">{current?.condition?.text}</p>
     </div>
-  )
+  );
 }
 
-export default WeatherDetails
+export default WeatherDetails;
