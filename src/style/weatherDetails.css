@@ -1,0 +1,57 @@
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #3b82f6, #6366f1);
+    color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 20px auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .temperature {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+  
+  .weather-condition {
+    margin-top: 5px;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  .location-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .location-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .location-country {
+    font-size: 18px;
+    opacity: 0.8;
+    text-align: right;
+  }
