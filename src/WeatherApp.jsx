@@ -23,7 +23,7 @@ function WeatherApp() {
 
   return (
     <div>
-      <WeatherDetails location={weather?.location} />
+      <WeatherDetails location={weather?.location}  current={weather?.current}/>
     </div>
   );
 }
