@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import HourlyCard from "./HourlyCard";
 
-function HourlyForecast() {
+function HourlyForecast({hourlyForecast}) {
   return (
-    <div>HourlyForecast</div>
-  )
+    <div>
+      {hourlyForecast?.map((hour, index) => {
+        return <HourlyCard key={index} hour={hour} />;
+      })}
+    </div>
+  );
 }
 
-export default HourlyForecast
+export default HourlyForecast;

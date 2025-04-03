@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import WeatherDetails from "./components/WeatherDetails";
 import DayButton from "./components/DayButton";
+import HourlyForecast from "./components/HourlyForecast";
 
 function WeatherApp() {
   const [weather, setWeather] = useState(null);
@@ -40,6 +41,9 @@ function WeatherApp() {
             />
           );
         })}
+      </div>
+      <div className="hourlyForcast">
+        <HourlyForecast hourlyForecast={weather?.forecast?.forecastday[selectedDay].hour}/>
       </div>
     </div>
   );

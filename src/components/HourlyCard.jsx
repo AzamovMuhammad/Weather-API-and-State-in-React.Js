@@ -1,8 +1,12 @@
 import React from 'react'
 
-function HourlyCard() {
+function HourlyCard({hour}) {
   return (
-    <div>HourlyCard</div>
+    <div>
+      <p>{hour.time.slice(-5)}</p>
+      <img src={hour.condition.icon} alt="" />
+      <p>{hour.temp_c} <sup>o</sup>C</p>
+    </div>
   )
 }
 
