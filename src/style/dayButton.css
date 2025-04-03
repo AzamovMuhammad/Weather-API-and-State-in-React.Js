@@ -18,3 +18,7 @@
 .weekButtons button:hover{
     background-color: #0056b3;
 }
+.active{
+    background: #0056b3 !important;
+    scale: 1.1;
+}

@@ -5,7 +5,7 @@ import DayButton from "./components/DayButton";
 
 function WeatherApp() {
   const [weather, setWeather] = useState(null);
-  const [selectedDay, setSelectedDay] = useState(0)
+  const [selectedDay, setSelectedDay] = useState(0);
 
   const getWeatherData = async () => {
     try {
@@ -23,11 +23,22 @@ function WeatherApp() {
   }, []);
 
   return (
-    <div >
-      <WeatherDetails location={weather?.location} current={weather?.current} />
+    <div>
+      <WeatherDetails
+        location={weather?.location}
+        current={weather?.forecast.forecastday[selectedDay].day}
+      />
       <div className="weekButtons">
-        {weather?.forecast?.forecastday.map((day) => {
-          return <DayButton key={day.date_epoch} day={day} />;
+        {weather?.forecast?.forecastday.map((day, index) => {
+          return (
+            <DayButton
+              key={day.date_epoch}
+              day={day}
+              index={index}
+              selectedDay={selectedDay}
+              setSelectedDay={setSelectedDay}
+            />
+          );
         })}
       </div>
     </div>
