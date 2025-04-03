@@ -5,6 +5,7 @@ import DayButton from "./components/DayButton";
 
 function WeatherApp() {
   const [weather, setWeather] = useState(null);
+  const [selectedDay, setSelectedDay] = useState(0)
 
   const getWeatherData = async () => {
     try {
