@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherDetails from "./components/WeatherDetails";
 import DayButton from "./components/DayButton";
 import HourlyForecast from "./components/HourlyForecast";
+import WeatherSearch from "./components/WeatherSearch";
 
 function WeatherApp() {
   const [weather, setWeather] = useState(null);
@@ -25,6 +26,7 @@ function WeatherApp() {
 
   return (
     <div>
+      <WeatherSearch/>
       <WeatherDetails
         location={weather?.location}
         current={weather?.forecast.forecastday[selectedDay].day}
