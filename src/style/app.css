@@ -5,7 +5,11 @@
     align-items: center;
     margin-top: 20px;
     gap: 20px;
+    overflow-x: auto; /* Gorizontal scroll qo'shildi */
+    white-space: nowrap; /* Kartalar qator bo'lib turishi uchun */
+    padding: 10px; /* Ichki joylashuvni yaxshilash */
 }
+
 .hourCard{
     width: 150px;
     flex-shrink: 0;
