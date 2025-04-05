@@ -3,7 +3,7 @@ import HourlyCard from "./HourlyCard";
 
 function HourlyForecast({hourlyForecast}) {
   return (
-    <div>
+    <div className="hourForcast">
       {hourlyForecast?.map((hour, index) => {
         return <HourlyCard key={index} hour={hour} />;
       })}
